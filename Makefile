@@ -1,5 +1,6 @@
+.EXPORT_ALL_VARIABLES:
 IMAGE = "jahrik/arm-prometheus"
-TAG := $(shell uname -m)
+TAG = latest
 STACK = "monitor"
 
 all: build
