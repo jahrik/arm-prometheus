@@ -5,9 +5,9 @@ Multi-arch Prometheus image: pinned `FROM` over official `prom/prometheus` with 
 ## Commands
 
 ```bash
-make build                                  # build jahrik/arm-prometheus:latest
+just build                                  # build jahrik/arm-prometheus:latest
 docker run --rm --entrypoint promtool jahrik/arm-prometheus:latest check config /etc/prometheus/prometheus.yml
-make deploy                                 # swarm stack deploy (stack: monitor)
+just deploy                                 # swarm stack deploy (stack: monitor)
 ```
 
 ## CI
