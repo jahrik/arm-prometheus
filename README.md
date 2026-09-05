@@ -17,14 +17,14 @@ Scrape jobs use swarm service DNS (`tasks.node-exporter`, `tasks.cadvisor`, `tas
 
 ```bash
 docker network create -d overlay monitor   # once
-make deploy                                # stack: monitor, behind traefik
+just deploy                                # stack: monitor, behind traefik
 ```
 
 ## Build
 
 ```bash
-make build
-make push
+just build
+just push
 ```
 
 CI: PR builds + `promtool check config` + health check; merge to main pushes multi-arch (amd64/arm64/armv7) to Docker Hub.
